@@ -9,4 +9,4 @@
 [创建授权oAuthapp文档](https://developer.github.com/apps/building-github-apps/creating-a-github-app/) 
 ## 工具
 [Git](https：//git-scm.com/dowmload)
-[VP](https://www.visual-paradigm.com)
+[Visual paradigm](https://www.visual-paradigm.com)
