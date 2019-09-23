@@ -38,7 +38,7 @@ public class GithubProvider {
         } catch (Exception e) {
             e.printStackTrace();
         }
-        return null;
+    return null;
     }
 
     public GithubUser getUser(String accesssToken) {
