@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RequestParam;
  */
 @Controller
 //自动识别扫描当前的类 做为spring的bean去管理
-// 同时也识别他为controller去获取前端的请求
+// 同时也识别他为controller去获取前端的请求 api 的承载者
 public class IndexController {
 @GetMapping("/")
     public String hello(String name,Model model ){
