@@ -1,0 +1,5 @@
+<root>
+    <item name='org.h2.engine.DbObjectBase database'>
+        <annotation name='java.lang.Deprecated'/>
+    </item>
+</root>

@@ -10,3 +10,9 @@
 ## 工具
 [Git](https：//git-scm.com/dowmload)
 [Visual para](https://www.visual-paradigm.com)
+[spring+mybaties](http://mybatis.org/spring/getting-started.html)
+[lombok](https://projectlombok.org/setup/maven)
+## 脚本
+```sql
+
+```

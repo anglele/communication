@@ -1,0 +1,56 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>发布</title>
+    <!--引入样式资源-->
+
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="css/communication.css">
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="js/bootstrap.min.js" type="application/javascript"></script>
+</head>
+<body>
+<div th:insert="~{navigation.html ::nav}"></div>
+    <div class="container-fluid main">
+        <div class="row">
+            <div class="col-lg-9 col-md-12 col-sm-12 col-xs-12">
+                <h2><span class="gluphicon glyphicon-plus" aria-hidden="true"></span>发起</h2>
+                <hr>
+                <form action="/publish"method="post"><!--get扩展页面 post执行请求-->
+                    <div class="form-group">
+                        <label for="title">问题标题【简单扼要】</label>
+                        <input type="text" class="form-control" id="title" th:value="${title}" name="title" placeholder="问题标题————"><!--打上title自动就没有 问题标题提示了-->
+                    </div>
+                    <div class="form-group">
+                        <label for="description">问题补充【必填，请参照右侧提示】：</label>
+                        <textarea  name="descreption" id="description" th:value="${descreption}"class="form-control" cols="30" rows="10"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="tag">添加把标签</label>
+                        <input type="text" class="form-control" th:value="${tag}" id="tag"  name="tag" placeholder="输入标签，以，分割"><!--打上title自动就没有 问题标题提示了-->
+                    </div>
+                    <div class="container-fluid main">
+                        <div class="row">
+                            <div class="alert alert-danger col-lg-9 col-md-12 col-sm-12 col-xs-12"th:text="${error}"
+                                 th:if="${error != null}"></div>
+                            <div class=" col-lg-3 col-md-12 col-sm-12 col-xs-12"  >
+                                <button type="submit" class="btn btn-success btn-publish">
+                                    发布
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class=" col-lg-3 col-md-12 col-sm-12 col-xs-12"  >
+                <h3>问题发起指南</h3>
+                .问题标题：请用精简得语言描述您发布得问题，不超过25个字：
+                .问题补充：详细补充您的问题得内容，并确保问题描述得清晰直观，并提供一些相关得资料；
+                .选择标签：选择一个或多个合适得标签，用逗号分隔开，每个标签不超过十个字；
+            </div>
+        </div>
+    </div>
+</body>
+</html>
